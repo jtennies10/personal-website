@@ -5,9 +5,8 @@
     background-color: #4d4d4d;
 }
 
-.NavBar div {
+.NavBar a {
     flex: 10;
-    max-height:5vh;
 }
 
 .NavBar .Link {
@@ -24,18 +23,20 @@
     background-color: greenyellow;
 }
 
-.NavBar div .Link {
+.NavBar a {
     padding-left: 1vw;
-    margin-top: 0px;
+    padding-bottom:2px;
+    padding-top:2px;
+    border-top:0px;
+    border-bottom:0px;
+    width: auto;
+}
+
+.NavBar a img {
     max-height: 100%;
     width: auto;
 }
 
-.NavBar div .Link img {
-    max-height: 100%;
-    width: auto;
-}
-
-.NavBar div .Link:hover {
+.NavBar a:hover {
     background-color:#4d4d4d;
 }

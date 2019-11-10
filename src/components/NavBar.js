@@ -11,7 +11,7 @@ class NavBar extends React.PureComponent {
     render() {
         return (
             <div className='NavBar'>
-                <div><Link className='Link' to='/'><img src={tennisBall}/></Link></div>
+                <a href='/'><img src={tennisBall}/></a>
                 <Link className='Link' to='/projects'>Projects</Link>
                 <Link className='Link' to='/blog'>Blog</Link>
                 <Link className='Link' to='/about'>About</Link>
