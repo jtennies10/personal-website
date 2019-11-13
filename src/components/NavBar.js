@@ -11,10 +11,11 @@ class NavBar extends React.PureComponent {
     render() {
         return (
             <div className='NavBar'>
-                <a href='/'><img src={tennisBall}/></a>
+                <a className='HomeIcon' href='/'><img src={tennisBall}/></a>
+                <div className='CurrentPage'></div>
                 <Link className='Link' to='/projects'>Projects</Link>
                 <Link className='Link' to='/blog'>Blog</Link>
-                <Link className='Link' to='/about'>About</Link>
+                <Link className='Link' to='/contact'>Contact</Link>
             </div>
         );
     };
