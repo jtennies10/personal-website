@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/styling.css'; 
 
-class HomePage extends React.PureComponent {
+class Landing extends React.PureComponent {
     render() {
         return (
             <div className='MainContent'>
@@ -17,4 +17,4 @@ class HomePage extends React.PureComponent {
     }
 }
 
-export default HomePage;
+export default Landing;

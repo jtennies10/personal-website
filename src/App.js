@@ -2,7 +2,8 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar.js';
-import HomePage from './components/HomePage.js';
+import Landing from './components/Landing.js';
+import ContactMe from './components/ContactMe.js';
 
 function App() {
   return (
@@ -18,11 +19,11 @@ function App() {
           </Route>
           <Route path='/contact'>
             <NavBar currentPage='Contact Me'/>
-            <h1>Contact me placeholder</h1>
+            <ContactMe/>
           </Route>
           <Route path='/'>
             <NavBar currentPage='Home'/>
-            <HomePage/>
+            <Landing/>
           </Route>
         </Switch>
       </Router>
