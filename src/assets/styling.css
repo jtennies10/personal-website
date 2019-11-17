@@ -1,26 +1,21 @@
 .NavBar {
     max-height:5vh;
-    width: 100vw;
+    padding-left: 20vw;
+    padding-right:20vw;
     display: flex;
-    background-color: #4d4d4d;
 }
 
 .HomeIcon {
-    max-width:5vh;
+    max-width:8vh;
 }
 
 .NavBar .Link {
     flex: 1;
-    color: greenyellow;
-    text-align: center;
+    color:#252525;
+    font-size:2.5em;
     text-decoration: none;
     outline-style: none;
-    padding: 1vh 0;
-}
-
-.NavBar .Link:hover {
-    color: #4d4d4d;
-    background-color: greenyellow;
+    padding: 1vh;
 }
 
 .NavBar a {
@@ -30,27 +25,19 @@
 }
 
 .NavBar a img {
-    max-width: 5vh;
+    max-width: 8vh;
     height: auto;
-}
-
-.NavBar a:hover {
-    background-color:#4d4d4d;
 }
 
 .NavBar .CurrentPage  {
     max-height: 5vh;
     text-align: center;
     flex:10;
-    color:greenyellow;
     padding-top:1vh;
 }
 
-.MainContent {
-    margin-left:10vh;
-    margin-right:10vh;
-}
-
-.MainContent h1 {
+.Centered {
+    padding-left:10%;
+    padding-right:10%;
     text-align:center;
 }

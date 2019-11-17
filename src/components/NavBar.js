@@ -15,7 +15,6 @@ class NavBar extends React.PureComponent {
                 <div className='CurrentPage'></div>
                 <Link className='Link' to='/projects'>Projects</Link>
                 <Link className='Link' to='/blog'>Blog</Link>
-                <Link className='Link' to='/contact'>Contact</Link>
             </div>
         );
     };
