@@ -6,7 +6,7 @@
 }
 
 .HomeIcon {
-    max-width:8vh;
+    max-width:7vh;
 }
 
 .NavBar .Link {
@@ -19,13 +19,14 @@
 }
 
 .NavBar a {
+    padding-top:1vh;
     padding-left: 1vw;
     padding-bottom:2px;
     width: auto;
 }
 
 .NavBar a img {
-    max-width: 8vh;
+    max-width: 7vh;
     height: auto;
 }
 

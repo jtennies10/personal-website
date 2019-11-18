@@ -23,6 +23,7 @@ function App() {
             <NavBar/>
             <Landing/>
           </Route>
+          <Redirect from='*' to='/'/>
         </Switch>
       </Router>
   );

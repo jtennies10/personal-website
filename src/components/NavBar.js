@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import tennisBall from '../assets/tennisball.PNG';
+import HomeButton from '../assets/homebutton.png';
 import '../assets/styling.css';
 
 class NavBar extends React.PureComponent {
@@ -11,7 +11,7 @@ class NavBar extends React.PureComponent {
     render() {
         return (
             <div className='NavBar'>
-                <a className='HomeIcon' href='/'><img src={tennisBall}/></a>
+                <a className='HomeIcon' href='/'><img src={HomeButton}/></a>
                 <div className='CurrentPage'></div>
                 <Link className='Link' to='/projects'>Projects</Link>
                 <Link className='Link' to='/blog'>Blog</Link>
