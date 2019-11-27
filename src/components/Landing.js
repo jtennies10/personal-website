@@ -4,7 +4,7 @@ import '../assets/styling.css';
 class Landing extends React.PureComponent {
     render() {
         return (
-            <div className='Centered'>
+            <div className='centered'>
                 <h1>Welcome to Table10is.com</h1>
                 <p>&emsp;&emsp;Hi there, my name is Joshua Tennies and thanks for visiting my website! I am a 22 year old Software Engineer who graduated from Western Governor’s University back in February of 2019. My first blog post walks through how I got to this point in my career in case you are curious. 
 	While I love developing software, my real passion lies in helping people and trying to be a better reflection of Jesus everyday. Beyond that, interests include adventuring, trying new things, movie-going, and fitness. Oh, and of course video games. Want to know more? Send me a message below!

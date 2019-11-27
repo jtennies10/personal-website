@@ -1,15 +1,16 @@
-.NavBar {
+.nav-bar {
     max-height:5vh;
     padding-left: 20vw;
     padding-right:20vw;
+    padding-bottom:3vh;
     display: flex;
 }
 
-.HomeIcon {
+.home-icon {
     max-width:7vh;
 }
 
-.NavBar .Link {
+.nav-bar .Link {
     flex: 1;
     color:#252525;
     font-size:2.5em;
@@ -18,27 +19,47 @@
     padding: 1vh;
 }
 
-.NavBar a {
+.nav-bar a {
     padding-top:1vh;
     padding-left: 1vw;
     padding-bottom:2px;
     width: auto;
 }
 
-.NavBar a img {
+.nav-bar a img {
     max-width: 7vh;
     height: auto;
 }
 
-.NavBar .CurrentPage  {
+.nav-bar .current-page  {
     max-height: 5vh;
     text-align: center;
     flex:10;
     padding-top:1vh;
 }
 
-.Centered {
+.centered {
     padding-left:10%;
     padding-right:10%;
     text-align:center;
+}
+
+.blog-main {
+    padding-top:3vh;
+    display: flex;
+}
+
+.section-summary {
+    flex:4
+}
+
+.blog-list {
+    flex:1;
+    overflow:auto;
+}
+
+.vertical-line {
+    border-left: thick solid #252525;
+    border-top: thick solid #252525;
+    height:90vh;
 }

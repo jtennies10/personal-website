@@ -10,9 +10,9 @@ class NavBar extends React.PureComponent {
 
     render() {
         return (
-            <div className='NavBar'>
-                <a className='HomeIcon' href='/'><img src={HomeButton}/></a>
-                <div className='CurrentPage'></div>
+            <div className='nav-bar'>
+                <a className='home-icon' href='/'><img src={HomeButton}/></a>
+                <div className='current-page'></div>
                 <Link className='Link' to='/projects'>Projects</Link>
                 <Link className='Link' to='/blog'>Blog</Link>
             </div>
