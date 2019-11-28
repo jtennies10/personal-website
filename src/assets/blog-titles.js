@@ -1,6 +1,6 @@
 export const BLOG_TITLES = 
-    `How I Got Here
-    Programming Paradigms
-    Kung Foo
-    Chop Suey
-    Sam Bigley`
+`How I Got Here
+Programming Paradigms
+Kung Foo
+Chop Suey
+Sam Bigley`
