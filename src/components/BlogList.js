@@ -1,10 +1,20 @@
 import React from 'react';
 import ReactList from 'react-list';
 import '../assets/styling.css';
+import { BLOG_TITLES } from '../assets/blog-titles.js';
 
 class BlogList extends React.PureComponent {
-    state = {
-        blogPosts: ['1','2','3','4','5','6']
+    
+    constructor(props) {
+        super(props)
+        this.state = {
+            blogPosts: this.getBlogLinks()
+        }
+    }
+
+    getBlogLinks() {
+        //TODO: split the blog titles and create links for each of them
+        return BLOG_TITLES.split('\n')
     }
     
     renderItem(index, key) {
