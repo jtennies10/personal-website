@@ -5,31 +5,25 @@ import '../assets/styling.css';
 import FileReader from 'filereader';
 
 class BlogHome extends React.PureComponent {
+    state = {
+        blogTitle: 'Blog Home',
+                blogText: 'Welcome to the home section of this blog'
+    }
+
     constructor(props) {
         super(props)
-        let fullPath = window.location.pathname.split('/')
-        let endPath = fullPath[fullPath.length-1]
-        if(endPath != 'blog') {
-            this.state = {
-                blogTitle: endPath.replace(new RegExp('-', 'g'), ' '),
-                blogText: this.getNextBlogText(endPath)
-            }
-        } else {
-            this.state = {
-                blogTitle: 'Blog Home',
-                blogText: 'Welcome to the home section of this blog'
-            }
-        }
+        this.renderAppropriate()
     }
 
     componentDidUpdate() {
+        this.renderAppropriate()
+    }
+
+    renderAppropriate() {
         let fullPath = window.location.pathname.split('/')
         let endPath = fullPath[fullPath.length-1]
         if(endPath != 'blog') {
-            this.setState({
-                blogTitle: endPath.replace(new RegExp('-', 'g'), ' '),
-                blogText: this.getNextBlogText(endPath)
-            })
+            this.getNextBlogText(endPath)
         } else {
             this.setState({
                 blogTitle: 'Blog Home',
@@ -38,31 +32,26 @@ class BlogHome extends React.PureComponent {
         }
     }
 
-    getNextBlogText(blogTitle) {
-        const blogText = async () => {
-            let f = await fetch('./How-I-Got-Here.txt')
-            console.log(f)
+    getNextBlogText(nextBlogTitle) {
+        const fetchData = async (blogTitle) => {
+            let response = await fetch('/' + nextBlogTitle + '.txt')
+            let data = await response.text()
+            return data
         }
-        blogText()
-        return 't'
+        fetchData(nextBlogTitle).then(nextBlogText => {
+            this.setState({
+                blogTitle: nextBlogTitle.replace(new RegExp('-', 'g'), ' '),
+                blogText: nextBlogText
+            })
+            //console.log(nextBlogText)
+        })
     }
 
-    readTextFile = file => {
-        var rawFile = new XMLHttpRequest();
-        rawFile.open("GET", file, false);
-        rawFile.onreadystatechange = () => {
-            if (rawFile.readyState === 4) {
-                if (rawFile.status === 200 || rawFile.status == 0) {
-                    var allText = rawFile.responseText;
-                    console.log("allText: ", allText);
-                    console.log(rawFile)
-                    this.setState({
-                        fundData: allText
-                    });
-                }
-            }
-        };
-        rawFile.send(null);
+    async getUserAsync(name) 
+    {
+        let response = await fetch('/' + name + '.txt')
+        let data = await response.text()
+        return data
     }
 
     render() {
