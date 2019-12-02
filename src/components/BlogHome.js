@@ -2,12 +2,11 @@ import React from 'react';
 import BlogList from './BlogList.js';
 import NavBar from './NavBar.js';
 import '../assets/styling.css';
-import FileReader from 'filereader';
 
 class BlogHome extends React.PureComponent {
     state = {
         blogTitle: 'Blog Home',
-                blogText: 'Welcome to the home section of this blog'
+        blogText: 'Welcome to the home section of this blog'
     }
 
     constructor(props) {
@@ -34,7 +33,7 @@ class BlogHome extends React.PureComponent {
 
     getNextBlogText(nextBlogTitle) {
         const fetchData = async (blogTitle) => {
-            let response = await fetch('/' + nextBlogTitle + '.txt')
+            let response = await fetch('/blog_posts/' + nextBlogTitle + '.txt')
             let data = await response.text()
             return data
         }
@@ -58,10 +57,13 @@ class BlogHome extends React.PureComponent {
         return (
             <React.Fragment>
                 <NavBar/>
-                <div>
-                    <h1>{this.state.blogTitle}</h1>
-                    <p className='section-summary'>{this.state.blogText}</p>
-                    <BlogList/>
+                <div className='content-main'>
+                    <BlogList className='blog-list'/>
+                    <div className='center-content'>
+                        <h1>{this.state.blogTitle}</h1>
+                        <p>{this.state.blogText}</p>
+                    </div>
+                    <div className='empty-side'/>
                 </div>    
             </React.Fragment>
         )

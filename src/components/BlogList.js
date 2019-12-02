@@ -17,35 +17,38 @@ class BlogList extends React.PureComponent {
         return BLOG_TITLES.split('\n')
     }
     
-    renderItem = (index, key) => {
-        //TODO: create a link object for each with a corresponding route
-        return (
-            <div key={key}>
-                <Link to={'/blog/'+this.state.blogPosts[index].replace(new RegExp(' ', 'g'), '-')}>
-                    {this.state.blogPosts[index]}</Link>
-
-                <Switch>
-                    <Route exact path={'/blog/'+this.state.blogPosts[index].replace(new RegExp(' ', 'g'), '-')}>
-                    </Route>
-                </Switch>
-            </div>
-        )
-            
-      }
-
     render() {
         return (
             <div className='blog-list'>
-                <div className='vertical-line'>
-                    <ReactList
-                        itemRenderer={(index,key) => this.renderItem(index,key)}
-                        length={this.state.blogPosts.length}
-                        type='uniform'
-                    />
-                </div>
+                <BlogPosts blogPosts={this.state.blogPosts}/>
             </div>
         )
     }
+}
+
+function BlogPosts(props) {
+    const items = props.blogPosts.map((blogPost) =>
+        <PostItem key={blogPost} title={blogPost}/>
+    );
+    return (
+        <ul>
+        {items}
+        </ul>
+    );
+}
+
+function PostItem(props) {
+    return (
+        <div className='blog-post-link'>
+            <Link className='link' to={'/blog/'+props.title.replace(new RegExp(' ', 'g'), '-')}>
+            {props.title}</Link>
+
+            <Switch>
+                <Route exact path={'/blog/'+props.title.replace(new RegExp(' ', 'g'), '-')}>
+                </Route>
+            </Switch>
+        </div>
+    )
 }
 
 export default BlogList;

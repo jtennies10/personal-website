@@ -12,7 +12,7 @@
 
 .nav-bar .Link {
     flex: 1;
-    color:#252525;
+    color:#484848;
     font-size:2.5em;
     text-decoration: none;
     outline-style: none;
@@ -44,22 +44,50 @@
     text-align:center;
 }
 
-.blog-main {
+.content-main {
     padding-top:3vh;
     display: flex;
 }
 
-.section-summary {
-    flex:4
+.center-content {
+    flex: 3;
+}
+
+.empty-side {
+    flex:1.5
 }
 
 .blog-list {
-    flex:1;
-    overflow:auto;
+    padding-left:1vw;
+    flex:1.5
 }
 
-.vertical-line {
-    border-left: thick solid #252525;
-    border-top: thick solid #252525;
-    height:90vh;
+.blog-list-items {
+    background-color: greenyellow;
+}
+
+.blog-post-link {
+    text-decoration: none;
+    background-color:#565656;
+    margin-top:2vh;
+    margin-bottom:2vh;
+    width:75%;
+    overflow:hidden;
+    white-space: nowrap;
+    display: flex;
+}
+
+.blog-post-link .link {
+    text-decoration: none;
+    padding:2vh;
+    color:#F8FFFF;
+    flex-grow: 1;
+}
+
+.blog-post-link:hover {
+    background-color: #484848;
+}
+
+.blog-post-link .link:selected {
+    text-decoration:none;
 }
