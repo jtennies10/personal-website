@@ -3,10 +3,16 @@ import BlogList from './BlogList.js';
 import NavBar from './NavBar.js';
 import '../assets/styling.css';
 
+const HOME_TEXT = `Welcome to my personal blog! The topics of this blog will likely vary greatly. 
+Here's the thing, I love developing software and talking about it, but I also love talking about
+more general concepts involved in software engineering. Low level, high level, highly technical, or 
+soft skill-based, it's all fair game here. All available posts are displayed to the left.`
+
+
 class BlogHome extends React.PureComponent {
     state = {
         blogTitle: 'Blog Home',
-        blogText: 'Welcome to the home section of this blog'
+        blogText: HOME_TEXT
     }
 
     constructor(props) {
@@ -26,7 +32,7 @@ class BlogHome extends React.PureComponent {
         } else {
             this.setState({
                 blogTitle: 'Blog Home',
-                blogText: 'Welcome to the home section of this blog'
+                blogText: HOME_TEXT
             })
         }
     }
