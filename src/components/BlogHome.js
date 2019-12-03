@@ -39,7 +39,7 @@ class BlogHome extends React.PureComponent {
 
     getNextBlogText(nextBlogTitle) {
         const fetchData = async (blogTitle) => {
-            let response = await fetch('/blog_posts/' + nextBlogTitle + '.txt')
+            let response = await fetch('/blog_posts/' + nextBlogTitle + '.html')
             let data = await response.text()
             return data
         }
@@ -48,15 +48,8 @@ class BlogHome extends React.PureComponent {
                 blogTitle: nextBlogTitle.replace(new RegExp('-', 'g'), ' '),
                 blogText: nextBlogText
             })
-            //console.log(nextBlogText)
+            console.log(nextBlogText)
         })
-    }
-
-    async getUserAsync(name) 
-    {
-        let response = await fetch('/' + name + '.txt')
-        let data = await response.text()
-        return data
     }
 
     render() {
@@ -67,7 +60,7 @@ class BlogHome extends React.PureComponent {
                     <BlogList className='blog-list'/>
                     <div className='center-content'>
                         <h1>{this.state.blogTitle}</h1>
-                        <p>{this.state.blogText}</p>
+                        <p dangerouslySetInnerHTML={{ __html: this.state.blogText }}/>
                     </div>
                     <div className='empty-side'/>
                 </div>    
