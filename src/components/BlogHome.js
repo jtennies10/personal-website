@@ -1,6 +1,7 @@
 import React from 'react';
 import BlogList from './BlogList.js';
 import NavBar from './NavBar.js';
+import Footer from './Footer.js';
 import '../assets/styling.css';
 
 const HOME_TEXT = `Welcome to my personal blog! The topics of this blog will likely vary greatly. 
@@ -54,7 +55,7 @@ class BlogHome extends React.PureComponent {
 
     render() {
         return (
-            <React.Fragment>
+            <div className='component-body'>
                 <NavBar/>
                 <div className='content-main'>
                     <BlogList className='blog-list'/>
@@ -63,8 +64,9 @@ class BlogHome extends React.PureComponent {
                         <p dangerouslySetInnerHTML={{ __html: this.state.blogText }}/>
                     </div>
                     <div className='empty-side'/>
-                </div>    
-            </React.Fragment>
+                </div>  
+                <Footer/>  
+            </div>
         )
     }
 }
