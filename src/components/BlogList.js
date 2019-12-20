@@ -16,12 +16,14 @@ class BlogList extends React.PureComponent {
     getBlogLinks() {
         return BLOG_TITLES.split('\n')
     }
+
+    updateParent() {
+        alert('update')
+    }
     
     render() {
         return (
-            <div className='blog-list'>
-                <BlogPosts blogPosts={this.state.blogPosts}/>
-            </div>
+            <BlogPosts blogPosts={this.state.blogPosts}/>
         )
     }
 }
@@ -31,8 +33,8 @@ function BlogPosts(props) {
         <PostItem key={blogPost} title={blogPost}/>
     );
     return (
-        <ul>
-        {items}
+        <ul className='blog-list'>
+            {items}
         </ul>
     );
 }
@@ -41,7 +43,7 @@ function PostItem(props) {
     return (
         <div className='blog-post-link'>
             <Link className='link' to={'/blog/'+props.title.replace(new RegExp(' ', 'g'), '-')}>
-            {props.title}</Link>
+            <h5>{props.title}</h5></Link>
 
             <Switch>
                 <Route exact path={'/blog/'+props.title.replace(new RegExp(' ', 'g'), '-')}>

@@ -56,15 +56,19 @@ class BlogHome extends React.PureComponent {
     render() {
         return (
             <div className='component-body'>
-                <NavBar/>
-                <div className='content-main'>
-                    <BlogList className='blog-list'/>
-                    <div className='center-content'>
-                        <h1>{this.state.blogTitle}</h1>
-                        <p dangerouslySetInnerHTML={{ __html: this.state.blogText }}/>
+                <div className='content'>
+                    <div className='content-head'>
+                        <NavBar/>
+                        <h3 className='page-title'>{this.state.blogTitle}</h3>
                     </div>
-                    <div className='empty-side'/>
-                </div>  
+                    <div className='content-main'>
+                        <div className='center-content'>
+                            
+                            <p dangerouslySetInnerHTML={{ __html: this.state.blogText }}/>
+                        </div>
+                        <div className='empty-side'/>
+                    </div>  
+                </div>
                 <Footer/>  
             </div>
         )
