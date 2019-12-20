@@ -14,8 +14,8 @@
 }
 
 .nav-bar-expanded {
-    background-color:black;
-    color:white;
+    background-color:#222222;
+    color:#F8F8FF;
     padding-left:2vw;
     padding-top:2vh;
     display: flex;
@@ -41,10 +41,13 @@
 }
 
 .link {
-    flex: 1;
-    color:white;
+    color:#F8F8FF;
     text-decoration: none;
     outline-style: none;
+}
+
+.link-text {
+    font-weight: bold;
 }
 
 .component-body {
@@ -65,6 +68,7 @@
     text-align:center;
     padding-top:2vh;
     flex:1;
+    color:#222222;
 }
 
 .centered {
@@ -88,22 +92,19 @@
 
 .blog-post-link {
     text-decoration: none;
-    background-color:white;
+    background-color:#F8F8FF;
     margin-top:2vh;
     margin-bottom:2vh;
     width:75%;
     overflow:hidden;
     white-space: nowrap;
-    display: flex;
-    flex-direction:column;
     border-radius:15%;
 }
 
 .blog-post-link .link {
     text-decoration: none;
     text-align:center;
-    color:black;
-    flex-grow: 1;
+    color:#222222;
 }
 
 .blog-post-link .link:selected {
@@ -131,9 +132,9 @@
     bottom: 0;
     width: 100vw;
     min-height: 8vh;
-    border-top-color: black;
-    border-top: 3px solid black;
-    color: black;
+    border-top-color: #222222;
+    border-top: 3px solid #222222;
+    color: #222222;
     text-align: center;
 }
 

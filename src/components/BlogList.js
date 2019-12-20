@@ -43,7 +43,7 @@ function PostItem(props) {
     return (
         <div className='blog-post-link'>
             <Link className='link' to={'/blog/'+props.title.replace(new RegExp(' ', 'g'), '-')}>
-            <h5>{props.title}</h5></Link>
+            <p className='link-text'>{props.title}</p></Link>
 
             <Switch>
                 <Route exact path={'/blog/'+props.title.replace(new RegExp(' ', 'g'), '-')}>

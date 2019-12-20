@@ -3,8 +3,8 @@ body {
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:white;
-  color:black;
+  background-color:#F8F8FF;
+  color:#222222;
   font-size: 1.25em;
 }
 
