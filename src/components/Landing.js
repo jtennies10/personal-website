@@ -11,7 +11,7 @@ class Landing extends React.PureComponent {
                 <div className='content'>
                     <div className='content-head'>
                         <NavBar/>
-                        <h3 className='page-title'>Landing</h3>
+                        <h3 className='page-title'>Home</h3>
                     </div>
                     <div className='content-main'>
                         <p>Hi there, my name is Joshua Tennies and thanks for visiting my website! I am a 22 year old Software Engineer who graduated from Western Governor’s University back in February of 2019. My first blog post walks through how I got to this point in my career in case you are curious. 
