@@ -7,6 +7,15 @@
     position:absolute;
 }
 
+.mobile-nav-bar {
+    margin-top:0vh;
+    padding-left:2vw;
+    padding-top:2vh;
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+}
+
 .nav-bar-simple {
     color:inherited;
     display:flex;
@@ -22,6 +31,18 @@
     flex-direction: column;
     height:100vh;
     width:20vw;
+    position:fixed;
+}
+
+.mobile-nav-bar-expanded {
+    background-color:#222222;
+    color:#F8F8FF;
+    padding-left:2vw;
+    padding-top:2vh;
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    width:100vw;
     position:fixed;
 }
 

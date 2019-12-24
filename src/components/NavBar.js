@@ -11,28 +11,63 @@ class NavBar extends React.PureComponent {
         this.state = {
             menuDisplay: 'none',
             navBarClass: 'nav-bar',
-            menuImage: black_menu
+            menuImage: black_menu,
+            isMobile: false
         }
     }
 
+    statics = {
+        MOBILE_SCREEN_WIDTH: 750
+    }
+
     toggleMenu = () => {
-        if(this.state.menuDisplay == 'block') {
+        if (this.setIsMobile()) {
+            if(this.state.menuDisplay == 'block') {
+                this.setState({
+                    menuDisplay: 'none',
+                    navBarClass: 'mobile-nav-bar',
+                    menuImage: black_menu
+                })
+            } else {
+                this.setState({
+                    menuDisplay: 'block',
+                    navBarClass: 'mobile-nav-bar-expanded',
+                    menuImage: white_menu
+                }) 
+            }
+        } else {
+            if(this.state.menuDisplay == 'block') {
+                this.setState({
+                    menuDisplay: 'none',
+                    navBarClass: 'nav-bar',
+                    menuImage: black_menu
+                })
+            } else if(this.state.menuDisplay == 'none') {
+                this.setState({
+                    menuDisplay: 'block',
+                    navBarClass: 'nav-bar-expanded',
+                    menuImage: white_menu
+                })
+            }
+        }
+    }
+    
+    setIsMobile = () => {
+        if(window.innerWidth < this.statics.MOBILE_SCREEN_WIDTH) {
             this.setState({
-                menuDisplay: 'none',
-                navBarClass: 'nav-bar',
-                menuImage: black_menu
+                isMobile: true
             })
+            return true
         } else {
             this.setState({
-                menuDisplay: 'block',
-                navBarClass: 'nav-bar-expanded',
-                menuImage: white_menu
+                isMobile:false
             })
+            return false
         }
     }
 
     renderBlogList = () => {
-        if(this.state.navBarClass == 'nav-bar-expanded') {
+        if(this.state.navBarClass == 'nav-bar-expanded' || this.state.navBarClass == 'mobile-nav-bar-expanded') {
             return <BlogList className='blog-list'/>
         }
     }
