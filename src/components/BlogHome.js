@@ -7,7 +7,7 @@ import '../assets/styling.css';
 const HOME_TEXT = `Welcome to my personal blog! The topics of this blog will likely vary greatly. 
 Here's the thing, I love developing software and talking about it, but I also love talking about
 more general concepts involved in software engineering. Low level, high level, highly technical, or 
-soft skill-based, it's all fair game here. All available posts are displayed to the left.`
+soft skill-based, it's all fair game here.`
 
 
 class BlogHome extends React.PureComponent {
@@ -15,6 +15,8 @@ class BlogHome extends React.PureComponent {
         blogTitle: 'Blog Home',
         blogText: HOME_TEXT
     }
+    
+    childKey = 0;
 
     constructor(props) {
         super(props)
@@ -49,7 +51,6 @@ class BlogHome extends React.PureComponent {
                 blogTitle: nextBlogTitle.replace(new RegExp('-', 'g'), ' '),
                 blogText: nextBlogText
             })
-            console.log(nextBlogText)
         })
     }
 
@@ -58,7 +59,7 @@ class BlogHome extends React.PureComponent {
             <div className='component-body'>
                 <div className='content'>
                     <div className='content-head'>
-                        <NavBar/>
+                        <NavBar key={++this.childKey}/>
                         <h3 className='page-title'>{this.state.blogTitle}</h3>
                     </div>
                     <div className='content-main'>

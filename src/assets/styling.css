@@ -64,6 +64,7 @@
 
 .link-text {
     font-weight: bold;
+    font-size: .5em;
 }
 
 .component-body {
@@ -111,10 +112,12 @@
     background-color:#F8F8FF;
     margin-top:2vh;
     margin-bottom:2vh;
-    width:75%;
+    width:60%;
     overflow:hidden;
     white-space: nowrap;
     border-radius:15%;
+    float:right;
+    margin-right:3vw;
 }
 
 .blog-post-link .link {
@@ -147,7 +150,7 @@
     left: 0;
     bottom: 0;
     width: 100vw;
-    min-height: 8vh;
+    min-height: 5vh;
     border-top-color: #222222;
     border-top: 3px solid #222222;
     color: #222222;
@@ -155,6 +158,5 @@
 }
 
 .footer-content {
-    padding-top:1vh;
     font-size: 0.01em;
 }

@@ -70,7 +70,7 @@ class NavBar extends React.PureComponent {
     renderBlogList = () => {
         if(this.state.navBarClass == 'nav-bar-expanded' || this.state.navBarClass == 'mobile-nav-bar-expanded') {
             return <BlogList className='blog-list'/>
-        }
+        } 
     }
 
     render() {
