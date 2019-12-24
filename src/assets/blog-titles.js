@@ -1,3 +1,2 @@
 export const BLOG_TITLES = 
-`How I Got Here
-`
+`How I Got Here`
