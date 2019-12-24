@@ -1,8 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import black_menu from '../assets/black_menu.png';
-import white_menu from '../assets/white_menu.png'
-import BlogList from './BlogList.js'
+import white_menu from '../assets/white_menu.png';
+import table_tennis from '../assets/table-tennis.png';
+import BlogList from './BlogList.js';
 import '../assets/styling.css';
 
 class NavBar extends React.PureComponent {
@@ -12,7 +13,7 @@ class NavBar extends React.PureComponent {
             menuDisplay: 'none',
             navBarClass: 'nav-bar',
             menuImage: black_menu,
-            isMobile: false
+            isMobile: this.setIsMobile()
         }
     }
 
@@ -77,7 +78,7 @@ class NavBar extends React.PureComponent {
             <div className={this.state.navBarClass}>
                 <div className='nav-bar-simple'>
                     <button className='menu-button' onClick={() => {this.toggleMenu()}}><img src={this.state.menuImage}/></button>
-                    <h3>Table10is</h3>
+                    <h3>{(this.state.isMobile) ? <img src={table_tennis}/> : 'Table10is'}</h3>
                 </div>
                 <div className='menu-options' style={{display:this.state.menuDisplay}}>
                     <Link className='link' to='/'><h2>Home</h2></Link>

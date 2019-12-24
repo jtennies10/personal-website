@@ -2,8 +2,6 @@
     margin-top:0vh;
     padding-left:2vw;
     padding-top:2vh;
-    display: flex;
-    flex-direction: column;
     position:absolute;
 }
 
@@ -11,9 +9,6 @@
     margin-top:0vh;
     padding-left:2vw;
     padding-top:2vh;
-    display: flex;
-    flex-direction: column;
-    position:absolute;
 }
 
 .nav-bar-simple {
