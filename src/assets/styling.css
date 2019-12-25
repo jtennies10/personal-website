@@ -162,5 +162,5 @@
 
 .home-link:visited, .home-link:focus {
     text-decoration: none;
-    color:#222222
+    color:inherit
 }
