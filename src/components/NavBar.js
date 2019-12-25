@@ -28,7 +28,7 @@ class NavBar extends React.PureComponent {
             if(this.state.menuDisplay == 'block') {
                 this.setState({
                     menuDisplay: 'none',
-                    navBarClass: 'mobile-nav-bar',
+                    navBarClass: 'nav-bar',
                     menuImage: menu_black,
                     mobileIcon: table_tennis_black
                 })
@@ -82,7 +82,7 @@ class NavBar extends React.PureComponent {
             <div className={this.state.navBarClass}>
                 <div className='nav-bar-simple'>
                     <button className='menu-button' onClick={() => {this.toggleMenu()}}><img src={this.state.menuImage}/></button>
-                    <a href='/'><h3>{(this.state.isMobile) ? <img src={this.state.mobileIcon}/> : 'Table10is'}</h3></a>
+                    <a className='home-link' href='/'><h3>{(this.state.isMobile) ? <img src={this.state.mobileIcon}/> : 'Table10is'}</h3></a>
                 </div>
                 <div className='menu-options' style={{display:this.state.menuDisplay}}>
                     <Link className='link' to='/'><h2>Home</h2></Link>
