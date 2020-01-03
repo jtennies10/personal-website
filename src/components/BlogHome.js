@@ -1,5 +1,4 @@
 import React from 'react';
-import BlogList from './BlogList.js';
 import NavBar from './NavBar.js';
 import Footer from './Footer.js';
 import '../assets/styling.css';

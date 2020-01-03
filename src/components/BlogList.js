@@ -1,24 +1,29 @@
 import React from 'react';
-import ReactList from 'react-list';
 import '../assets/styling.css';
 import {Switch, Route, Link} from 'react-router-dom';
-import { BLOG_TITLES } from '../assets/blog-titles.js';
 
 class BlogList extends React.PureComponent {
-    
+    state = {
+        blogPosts: []
+    }
+
     constructor(props) {
         super(props)
-        this.state = {
-            blogPosts: this.getBlogLinks()
+        this.getBlogLinks()
+    }
+
+    getBlogLinks = () => {
+        const fetchData = async () => {
+            let response = await fetch('/blog_posts/blog-titles.txt')
+            let data = await response.text()
+            return data
         }
-    }
-
-    getBlogLinks() {
-        return BLOG_TITLES.split('\n')
-    }
-
-    updateParent() {
-        alert('update')
+        fetchData().then(posts => {
+            this.setState({
+                blogPosts: posts.split('\n')
+            })
+            
+        })
     }
     
     render() {
@@ -29,6 +34,8 @@ class BlogList extends React.PureComponent {
 }
 
 function BlogPosts(props) {
+    console.log(props.blogPosts)
+
     const items = props.blogPosts.map((blogPost) =>
         <PostItem key={blogPost} title={blogPost}/>
     );
