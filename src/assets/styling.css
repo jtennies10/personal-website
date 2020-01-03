@@ -12,8 +12,8 @@
 }
 
 .nav-bar-expanded {
-    background-color:#222222;
-    color:#F8F8FF;
+    background-color:#111111;
+    color:white;
     padding-left:2vw;
     padding-top:2vh;
     display: flex;
@@ -24,8 +24,8 @@
 }
 
 .mobile-nav-bar-expanded {
-    background-color:#222222;
-    color:#F8F8FF;
+    background-color:#111111;
+    color:white;
     padding-left:2vw;
     padding-top:2vh;
     display: flex;
@@ -51,7 +51,7 @@
 }
 
 .link {
-    color:#F8F8FF;
+    color:white;
     text-decoration: none;
     outline-style: none;
 }
@@ -103,13 +103,13 @@
 
 .blog-post-link {
     text-decoration: none;
-    background-color:#F8F8FF;
-    margin-top:2vh;
-    margin-bottom:2vh;
+    background-color:white;
+    margin-top:1vh;
+    margin-bottom:1vh;
     width:60%;
     overflow:hidden;
     white-space: nowrap;
-    border-radius:15%;
+    border-radius:5%;
     float:right;
     margin-right:3vw;
 }
@@ -142,10 +142,7 @@
 }
 
 .footer {
-    left: 0;
-    bottom: 0;
     width: 100vw;
-    min-height: 5vh;
     border-top-color: #222222;
     border-top: 3px solid #222222;
     color: #222222;
@@ -153,7 +150,10 @@
 }
 
 .footer-content {
-    font-size: 0.01em;
+    font-size: 0.5em;
+    padding: 0;
+    border: 0;
+    margin: 0;
 }
 
 .home-link {
