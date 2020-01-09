@@ -34,7 +34,6 @@ class BlogList extends React.PureComponent {
 }
 
 function BlogPosts(props) {
-    console.log(props.blogPosts)
 
     const items = props.blogPosts.map((blogPost) =>
         <PostItem key={blogPost} title={blogPost}/>
