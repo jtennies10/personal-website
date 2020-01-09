@@ -24,7 +24,21 @@ class NavBar extends React.PureComponent {
     }
 
     toggleMenu = () => {
-        if (this.setIsMobile()) {
+        if (!this.setIsMobile()) {
+            if(this.state.menuDisplay == 'block') {
+                this.setState({
+                    menuDisplay: 'none',
+                    navBarClass: 'nav-bar',
+                    menuImage: menu_black
+                })
+            } else if(this.state.menuDisplay == 'none') {
+                this.setState({
+                    menuDisplay: 'block',
+                    navBarClass: 'nav-bar-expanded',
+                    menuImage: menu_white
+                })
+            }
+        } else {
             if(this.state.menuDisplay == 'block') {
                 this.setState({
                     menuDisplay: 'none',
@@ -39,20 +53,6 @@ class NavBar extends React.PureComponent {
                     menuImage: menu_white,
                     mobileIcon: table_tennis_white
                 }) 
-            }
-        } else {
-            if(this.state.menuDisplay == 'block') {
-                this.setState({
-                    menuDisplay: 'none',
-                    navBarClass: 'nav-bar',
-                    menuImage: menu_black
-                })
-            } else if(this.state.menuDisplay == 'none') {
-                this.setState({
-                    menuDisplay: 'block',
-                    navBarClass: 'nav-bar-expanded',
-                    menuImage: menu_white
-                })
             }
         }
     }
