@@ -59,7 +59,7 @@ class BlogHome extends React.PureComponent {
                 <div className='content'>
                     <div className='content-head'>
                         <NavBar key={++this.childKey}/>
-                        <h3 className='page-title'>{this.state.blogTitle}</h3>
+                        <div className='page-title'><h3>{this.state.blogTitle}</h3></div>
                     </div>
                     <div className='content-main'>
                         <div className='center-content'>

@@ -78,8 +78,14 @@
 .page-title {
     text-align:center;
     padding-top:2vh;
-    flex:1;
+    width:100%;
+    overflow:wrap;
     color:#222222;
+}
+
+.page-title h3 {
+    max-width:50vw;
+    display:inline-block;
 }
 
 .centered {
@@ -127,7 +133,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 75%;
 }
 
 .image-caption {
